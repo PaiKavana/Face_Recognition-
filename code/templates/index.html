@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Face detection</title>
+</head>
+<style>
+    body {
+            background-color: #00FFFF;
+         }
+     h1 {
+            text-align: center;
+            color: #373737;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 48px;
+            margin-top: 50px;
+            text-shadow: 3px 3px #E6E6E6;
+         }
+          input[type=submit] {
+            background-color: #373737;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-family: 'Montserrat', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+         }
+         input[type=submit]:hover {
+            background-color: #FFFFFF;
+            color: #373737;
+         }
+         form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            flex-direction: row;
+            text-align: center;
+        }
+        
+</style>
+<body>
+    <h1>File Upload</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*">
+        <input type="submit" value="Upload">
+    </form>
+    <h1>Image Upload</h1>
+    <form action="/compare" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*">
+        <br>
+        <input type="submit" value="Upload">
+    </form>
+</body>
+</html>
